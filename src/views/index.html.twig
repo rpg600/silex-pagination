@@ -1,0 +1,29 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Address</th>
+            </tr>
+            {% for result in pager %}
+                <tr>
+                    <td>{{ result.id }}</td>
+                    <td>{{ result.firstName }}</td>
+                    <td>{{ result.lastName }}</td>
+                    <td>
+                        <ul class="no-bullet">
+                            {% for address in result.address|split("|") %}
+                                <li>{{ address }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        {{ pagerfanta(pager)|raw }}
+    </div>
+{% endblock %}

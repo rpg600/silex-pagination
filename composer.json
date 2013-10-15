@@ -1,0 +1,13 @@
+{
+    "name": "silex-pagerfanta",
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "franmomu/silex-pagerfanta-provider": "1.0.*@dev",
+        "pagerfanta/pagerfanta": "dev-master",
+        "fzaninotto/faker": "1.1.*@dev",
+        "symfony/twig-bridge": "~2.3"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}
