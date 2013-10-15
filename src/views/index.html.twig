@@ -24,6 +24,8 @@
                 </tr>
             {% endfor %}
         </table>
-        {{ pagerfanta(pager)|raw }}
+        <div class="pagination">
+            {{ pagerfanta(pager)|raw }}
+        </div>
     </div>
 {% endblock %}
